@@ -3,21 +3,21 @@ version: '3'
 services:
   train:
     image: baddam355/train
-    port:
+    ports:
       - 80:80
     deploy:
       replicas: 3
 
   movies:
     image: baddam355/movies
-    port:
+    ports:
       - 81:80
     deploy:
       replicas: 3
 
   dth:
     image: baddam355/dth
-    port:
+    ports:
       - 82:80
     deploy:
       replicas: 3
