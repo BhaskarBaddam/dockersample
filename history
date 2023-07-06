@@ -1,0 +1,35 @@
+    1  clear
+    2  yum install docker -y
+    3  systemctl start docker
+    4  systemctl status docker
+    5  clear
+    6  docker swarm init --advertise-addr 172.31.89.45
+    7  vim jenkins.sh
+    8  sh jenkins.sh
+    9  clear
+   10  chmod 777 /var/run/docker.sock
+   11  vim .bashrc
+   12  sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+   13  sudo chmod +x /usr/local/bin/docker-compose
+   14  docker-compose version
+   15  vim .bashrc
+   16  source .bashrc
+   17  docker-compose version
+   18  vim /lib/systemd/system/docker.service
+   19  systemctl daemon-reload
+   20  systemctl restart docker
+   21  systemctl status docker
+   22  docker login
+   23  chmod 777 /var/run/docker.sock
+   24  systemctl daemon-reload
+   25  systemctl restart docker
+   26  sudo groupadd docker
+   27  docker run hello-world
+   28  cd /var/run/
+   29  ll
+   30  chmod 777 docker.sock
+   31  ll
+   32  cd -
+   33  docker stack ls
+   34  docker ps -a
+   35  history
